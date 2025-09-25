@@ -39,15 +39,15 @@ jobs:
       #- name: Log in to Docker (optional if pushing)
       #  run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
 
-      - name: Build Docker image
-        run: docker build -t my-app:latest .
+  #    - name: Build Docker image
+   #     run: docker build -t my-app:latest .
 
-      - name: Generate Container SBOM
-        uses: anchore/syft-action@v0.5.0
-        with:
-          image: my-app:latest
-          format: cyclonedx-json
-          output: sbom-container.json
+    #  - name: Generate Container SBOM
+     #   uses: anchore/syft-action@v0.5.0
+      #  with:
+       #   image: my-app:latest
+        #  format: cyclonedx-json
+         # output: sbom-container.json
 
  #     - name: Upload Container SBOM
  #       run: |
